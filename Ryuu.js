@@ -1360,7 +1360,7 @@ ${tampilUcapan}
 ✾ ${prefix}cringe`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, {"contentText": `${menu}`,  "footerText": `${teks}`,"buttons": [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ]
+Sendbutdocument(from, {"contentText": `${menu}`,  "footerText": `${teks}`,"buttons": [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 }],
 "headerType": "DOCUMENT", "documentMessage": {
             "url": "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc",
             "mimetype": "application/pdf",
