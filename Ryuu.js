@@ -42,6 +42,7 @@ const emoji = new EmojiAPI()
 const setting = JSON.parse(fs.readFileSync('./setting.json'))
 
 //LIB
+const { msgFilter } = require('./lib/antispam')
 const { fetchJosn, kyun, fetchText } = require('./lib/fetcher')
 const { color, bgcolor } = require('./lib/color')
 const { wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, close } = require('./lib/functions')
@@ -145,6 +146,18 @@ if (position !== null) {
 return scommand[position].chats
 }
 }
+let spam1 = `𝙹𝚊𝚗𝚐𝚊𝚗 𝚜𝚙𝚊𝚖 𝚢𝚊 𝚔𝚊𝚔\n𝙱𝚎𝚛𝚒𝚔𝚊𝚗 𝚓𝚎𝚍𝚊 3 𝚍𝚎𝚝𝚒𝚔/𝚙𝚎𝚛𝚒𝚗𝚝𝚊𝚑`
+let spam2 = 'lolita'
+let spam3 = [{
+buttonId: `${prefix}maap`,
+buttonText: {
+displayText: `💈𝘔𝘢𝘢𝘧  `,
+},
+type: 1,}]
+if (isCmd && msgFilter.isFiltered(from)) {
+return sendButMessage (from, spam1, spam2, spam3, { quoted: freply})
+}
+if (isCmd) msgFilter.addFilter(from)
 //Module Export
 module.exports = Ryuu = async (Ryuu, mek, _welkom) => {
 try {
