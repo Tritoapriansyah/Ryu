@@ -12,6 +12,8 @@ Presence,
 MessageOptions,
 Mimetype,
 WALocationMessage,
+WAMessageProto,
+ChatModification,
 WA_MESSAGE_STUB_TYPES,
 WA_DEFAULT_EPHEMERAL,
 ReconnectMode,
@@ -20,6 +22,8 @@ GroupSettingChange,
 waChatKey,
 mentionedJid,
 processTime,
+prepareMessageFromContent, 
+relayWAMessage,
 } = require("@adiwajshing/baileys")
 const fs = require("fs")
 const axios = require('axios')
