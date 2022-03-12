@@ -200,8 +200,7 @@ const hour_now = moment().format('HH:mm:ss')
 const conts = mek.key.fromMe ? Ryuu.user.jid : Ryuu.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 const pushname = mek.key.fromMe ? Ryuu.user.name : conts.notify || conts.vname || conts.name || '-'
 const processsTime = (timestamp, now) => {
-return moment.duration(now - moment(timestamp * 1000)).asSeconds()}
-let isCmd = body.startsWith(prefix) 
+return moment.duration(now - moment(timestamp * 1000)).asSeconds()} 
 
 //Function TicTacToe
 idttt = []
