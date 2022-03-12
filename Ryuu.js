@@ -146,18 +146,7 @@ if (position !== null) {
 return scommand[position].chats
 }
 }
-let spam1 = `𝙹𝚊𝚗𝚐𝚊𝚗 𝚜𝚙𝚊𝚖 𝚢𝚊 𝚔𝚊𝚔\n𝙱𝚎𝚛𝚒𝚔𝚊𝚗 𝚓𝚎𝚍𝚊 3 𝚍𝚎𝚝𝚒𝚔/𝚙𝚎𝚛𝚒𝚗𝚝𝚊𝚑`
-let spam2 = 'lolita'
-let spam3 = [{
-buttonId: `${prefix}maap`,
-buttonText: {
-displayText: `💈𝘔𝘢𝘢𝘧  `,
-},
-type: 1,}]
-if (isCmd && msgFilter.isFiltered(from)) {
-return sendButMessage (from, spam1, spam2, spam3, { quoted: freply})
-}
-if (isCmd) msgFilter.addFilter(from)
+
 //Module Export
 module.exports = Ryuu = async (Ryuu, mek, _welkom) => {
 try {
@@ -213,6 +202,7 @@ const conts = mek.key.fromMe ? Ryuu.user.jid : Ryuu.contacts[sender] || { notify
 const pushname = mek.key.fromMe ? Ryuu.user.name : conts.notify || conts.vname || conts.name || '-'
 const processsTime = (timestamp, now) => {
 return moment.duration(now - moment(timestamp * 1000)).asSeconds()}
+let isCmd = body.startsWith(prefix) 
 
 //Function TicTacToe
 idttt = []
@@ -336,6 +326,18 @@ if (_healt[position].healt >= 0) return reply('healt kmu dh penuh')
 fs.writeFileSync('./lib/rpg/healt.json', JSON.stringify(_healt))
 }
 }
+let spam1 = `𝙹𝚊𝚗𝚐𝚊𝚗 𝚜𝚙𝚊𝚖 𝚢𝚊 𝚔𝚊𝚔\n𝙱𝚎𝚛𝚒𝚔𝚊𝚗 𝚓𝚎𝚍𝚊 3 𝚍𝚎𝚝𝚒𝚔/𝚙𝚎𝚛𝚒𝚗𝚝𝚊𝚑`
+let spam2 = 'lolita'
+let spam3 = [{
+buttonId: `${prefix}maap`,
+buttonText: {
+displayText: `💈𝘔𝘢𝘢𝘧  `,
+},
+type: 1,}]
+if (isCmd && msgFilter.isFiltered(from)) {
+return sendButMessage (from, spam1, spam2, spam3, { quoted: freply})
+}
+if (isCmd) msgFilter.addFilter(from)
 
 //Mess Dll
 mess = {
