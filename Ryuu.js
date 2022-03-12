@@ -259,9 +259,8 @@ if (isOwner) {
 elit = 'GM in GAME'
 }
 //Auto Read
-if (!setting.autoread) {
 Ryuu.chatRead(from)
-}
+ 
 //funtion limited by febri
 const isHealt = (sender) =>{ 
 let position = false
